@@ -1,4 +1,5 @@
 ---
+slug: "/articles/2013/images"
 title: Images
 date: 2013-12-26 22:46:49
 ---

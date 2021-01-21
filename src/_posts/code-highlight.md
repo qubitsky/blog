@@ -1,4 +1,5 @@
 ---
+slug: "/articles/2019/code-highlight"
 title: Code Highlight Style test
 date: 2019-07-25 16:43:00
 tags:

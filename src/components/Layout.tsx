@@ -1,7 +1,11 @@
+/** @jsx jsx */
 import React from "react";
+import { jsx, SxStyleProp } from "theme-ui";
 import { Helmet } from "react-helmet";
 
-const Layout = ({ children }) => {
+const Layout: React.FC<{
+  mainSxProp?: SxStyleProp;
+}> = ({ mainSxProp, children }) => {
   return (
     <>
       <Helmet>
@@ -13,7 +17,31 @@ const Layout = ({ children }) => {
         />
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       </Helmet>
-      <main>{children}</main>
+      <div
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <main
+          sx={{
+            width: "100%",
+            flex: "1 1 auto",
+            ...mainSxProp,
+          }}
+        >
+          {children}
+        </main>
+        <footer
+          sx={{
+            width: "100%",
+            textAlign: "center",
+          }}
+        >
+          <p>Copyright © 2020 qubitsky. All Rights Reserved. 苍微q 版权所有</p>
+        </footer>
+      </div>
     </>
   );
 };

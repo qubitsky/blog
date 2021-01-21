@@ -1,7 +1,5 @@
 html,
-body,
-#___gatsby,
-#gatsby-focus-wrapper {
+body {
   height: 100%;
   margin: 0;
   overflow: auto;
@@ -26,18 +24,11 @@ body {
     rgb(238, 238, 238) 100%
   );
 }
-main {
-  text-align: center;
-}
-h1 {
-  font-size: 72px;
-}
 img {
-  width: 200px;
-  height: 200px;
+  max-width: 100%;
 }
-footer {
-  margin-top: auto;
+a {
+  text-decoration: none;
 }
 .loading {
   vertical-align: middle;

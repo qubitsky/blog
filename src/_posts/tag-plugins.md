@@ -1,4 +1,5 @@
 ---
+slug: "/articles/2013/tag-plugins"
 title: Tag Plugins
 date: 2013-12-25 00:14:39
 tags:

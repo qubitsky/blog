@@ -1,4 +1,5 @@
 ---
+slug: "/articles/2013/no-title"
 date: 2013-12-25 22:57:49
 tags:
 ---

@@ -24,15 +24,20 @@
     "@lottiefiles/react-lottie-player": "^2.2.2",
     "gatsby": "^2.30.2",
     "gatsby-plugin-react-helmet": "^3.8.0",
+    "gatsby-plugin-theme-ui": "^0.3.5",
+    "gatsby-remark-prismjs": "^3.12.0",
     "gatsby-source-filesystem": "^2.9.1",
-    "gatsby-transformer-remark": "^2.14.0",
+    "gatsby-transformer-remark": "^2.15.0",
     "normalize.css": "^8.0.1",
+    "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "theme-ui": "^0.3.5"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.0",
+    "@types/theme-ui": "^0.3.7",
     "gh-pages": "^3.1.0"
   }
 }
