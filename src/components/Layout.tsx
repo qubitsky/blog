@@ -9,7 +9,7 @@ const Layout: React.FC<{
   return (
     <>
       <Helmet>
-        <title>苍微の城</title>
+        <title>苍微之城</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap"
@@ -39,7 +39,10 @@ const Layout: React.FC<{
             textAlign: "center",
           }}
         >
-          <p>Copyright © 2020 qubitsky. All Rights Reserved. 苍微q 版权所有</p>
+          <p>
+            Copyright © {new Date().getFullYear()} qubitsky. All Rights
+            Reserved. 苍微q 版权所有
+          </p>
         </footer>
       </div>
     </>
