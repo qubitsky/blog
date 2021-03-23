@@ -17,9 +17,10 @@ const PostTemplate = ({ data }) => {
       </h1>
       <section
         sx={{
-          maxWidth: 'container',
+          backgroundColor: "#fff",
+          maxWidth: "container",
           mx: "auto",
-          px: 3,
+          px: 40,
           py: 4,
         }}
         dangerouslySetInnerHTML={{ __html: post.html }}
