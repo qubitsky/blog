@@ -17,7 +17,7 @@ const Articles = ({ data }) => {
               date={node.frontmatter.date}
               slug={node.frontmatter.slug}
               excerpt={node.excerpt}
-              categories={node.frontmatter.categories}
+              tags={node.frontmatter.tags}
             />
           );
         })}

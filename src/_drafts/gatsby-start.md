@@ -2,6 +2,8 @@
 slug: "/articles/2021/gatsby-start"
 title: Gatsby 入门指南
 date: 2021-01-20
+tags:
+- Gatsby
 ---
 
 对于想要构建个人网站的开发者来说，使用 [Gatsby](https://www.gatsbyjs.com/) 是一个比较好的选择。当然还有其他优秀的网站生成工具，可以在这里找到：[https://jamstack.org/generators/](https://jamstack.org/generators/)。其中我还尝试过 [Jekyll](https://jekyllrb.com/)、[Hexo](https://hexo.io/)，他们被称作静态网站生成器（static website generator），通常被用来生成博客（Blog）网站，开发者可以在项目中按 markdown 格式编辑好文章（.md 文件），然后里面的构建工具将这些文件转换成静态网页（.html 文件）。
