@@ -5,14 +5,29 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
+        name: `pages`,
         path: `${__dirname}/src/_posts`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [`gatsby-remark-prismjs`],
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Alegreya`, `Josefin Sans`, `Noto Sans SC`],
+        display: "swap",
       },
     },
     "gatsby-plugin-theme-ui",

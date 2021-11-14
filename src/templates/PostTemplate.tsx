@@ -1,30 +1,22 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, Themed } from "theme-ui";
 import { graphql } from "gatsby";
-
+import { Container } from "theme-ui";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/Layout";
+import Header from "../components/Header";
+import { typography } from "../gatsby-plugin-theme-ui";
 
 const PostTemplate = ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
   return (
-    <Layout>
-      <h1
-        sx={{
-          textAlign: "center",
-        }}
-      >
-        {post.frontmatter.title}
-      </h1>
-      <section
-        sx={{
-          backgroundColor: "#fff",
-          maxWidth: "container",
-          mx: "auto",
-          px: 40,
-          py: 4,
-        }}
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+    <Layout header={<Header />}>
+      <Container py={4}>
+        <Themed.h1 sx={{ textAlign: "center" }}>
+          {post.frontmatter.title}
+        </Themed.h1>
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </Container>
     </Layout>
   );
 };
@@ -33,11 +25,10 @@ export default PostTemplate;
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
-        date(formatString: "YYYY年 MM月DD")
       }
     }
   }

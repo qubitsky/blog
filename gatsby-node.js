@@ -4,11 +4,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const postTemplate = require.resolve(`./src/templates/PostTemplate.tsx`);
 
   const result = await graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+    query MdxPosts {
+      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
           frontmatter {
             slug
@@ -24,9 +21,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  const posts = result.data.allMarkdownRemark.nodes;
+  const posts = result.data.allMdx.nodes;
 
-  posts.forEach(node => {
+  posts.forEach((node) => {
     if (node.frontmatter.slug) {
       createPage({
         path: node.frontmatter.slug,

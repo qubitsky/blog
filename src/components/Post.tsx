@@ -1,15 +1,21 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
+import { Box, Heading, Paragraph, Link } from "theme-ui";
 
-const Post = ({ title, date, slug, excerpt }) => {
+const Post = ({ title, date, slug, excerpt, categories }) => {
   return (
-    <article>
-      <h3>
-        <Link to={slug || '#'}>{title || '--'}</Link>
-      </h3>
+    <Box bg="muted" p={3} sx={{ my: "16px" }}>
+      <Heading>
+        <Link href={slug || "#"}>{title || "--"}</Link>
+      </Heading>
+      {/* <div>
+        {categories?.map((c, i) => {
+          return <span key={i}>#{c}</span>;
+        })}
+      </div> */}
       <time>{date}</time>
-      <p>{excerpt}</p>
-    </article>
+      <Paragraph>{excerpt}</Paragraph>
+    </Box>
   );
 };
 

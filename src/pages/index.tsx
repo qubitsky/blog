@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import * as jinrishici from "jinrishici";
 import Particles from "react-tsparticles";
 import Layout from "../components/Layout";
+import MenuList from "../components/MenuList";
 import particleOpts from "./particle.json";
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
       <header
         sx={{
           width: "100%",
-          height: 300,
+          height: 320,
           position: "relative",
         }}
       >
@@ -53,7 +54,7 @@ const Home = () => {
         >
           <h1
             sx={{
-              width: 268,
+              width: 432,
               height: 80,
               textIndent: -1000,
               backgroundImage: "url(/assets/logo.png)",
@@ -63,9 +64,7 @@ const Home = () => {
           >
             苍微の城
           </h1>
-          <p sx={{ color: "#fff" }} id="jinrishici-sentence">
-            {shichi}
-          </p>
+          <p id="jinrishici-sentence">{shichi}</p>
         </div>
       </header>
       <section
@@ -75,11 +74,15 @@ const Home = () => {
           alignItems: "center",
         }}
       >
-        <img
-          src="https://bigheads.io/svg?accessory=none&body=chest&circleColor=blue&clothing=shirt&clothingColor=red&eyebrows=angry&eyes=normal&faceMask=false&faceMaskColor=green&facialHair=none3&graphic=react&hair=short&hairColor=black&hat=none5&hatColor=blue&lashes=false&lipColor=turqoise&mask=true&mouth=tongue&skinTone=yellow"
-          alt="Big Head"
+        <MenuList
           sx={{
-            width: 200,
+            svg: {
+              width: 48,
+              height: 48,
+            },
+            span: {
+              mt: 16,
+            },
           }}
         />
       </section>

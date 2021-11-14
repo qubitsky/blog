@@ -1,20 +1,15 @@
 /** @jsx jsx */
-import React from "react";
-import { jsx, SxStyleProp } from "theme-ui";
+import React, { ReactNode } from "react";
+import { jsx } from "theme-ui";
 import { Helmet } from "react-helmet";
 
 const Layout: React.FC<{
-  mainSxProp?: SxStyleProp;
-}> = ({ mainSxProp, children }) => {
+  header?: ReactNode;
+}> = ({ header, children }) => {
   return (
     <>
       <Helmet>
-        <title>苍微之城</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap"
-          rel="stylesheet"
-        />
+        <title>苍微的网络空间</title>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       </Helmet>
       <div
@@ -22,13 +17,13 @@ const Layout: React.FC<{
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
+          color: "#333",
         }}
       >
+        {header}
         <main
           sx={{
-            width: "100%",
             flex: "1 1 auto",
-            ...mainSxProp,
           }}
         >
           {children}
@@ -37,6 +32,7 @@ const Layout: React.FC<{
           sx={{
             width: "100%",
             textAlign: "center",
+            fontSize: 12,
           }}
         >
           <p>
