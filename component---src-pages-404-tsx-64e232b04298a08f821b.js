@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[218],{3205:function(e,t,s){s.r(t);var a=s(7294),l=s(5603);t.default=function(){return a.createElement(l.J5,{src:"https://assets3.lottiefiles.com/packages/lf20_rDB3bm.json",background:"transparent",speed:1,style:{width:"300px",height:"300px"},loop:!0,controls:!0,autoplay:!0})}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-64e232b04298a08f821b.js.map
