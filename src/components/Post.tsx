@@ -1,12 +1,12 @@
 import React from "react";
-// import { Link } from "gatsby";
+import { withPrefix } from "gatsby";
 import { Box, Heading, Paragraph, Link } from "theme-ui";
 
 const Post = ({ title, date, slug, excerpt, categories }) => {
   return (
     <Box bg="muted" p={3} sx={{ my: "16px" }}>
       <Heading>
-        <Link href={slug || "#"}>{title || "--"}</Link>
+        <Link href={withPrefix(slug || "#")}>{title || "--"}</Link>
       </Heading>
       {/* <div>
         {categories?.map((c, i) => {

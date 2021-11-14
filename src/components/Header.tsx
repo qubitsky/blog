@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container } from "theme-ui";
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import MenuList from "./MenuList";
 
 const Header = () => {
@@ -24,7 +24,7 @@ const Header = () => {
           sx={{
             width: 129,
             height: 62,
-            backgroundImage: "url(/assets/logo2.png)",
+            backgroundImage: `url(${withPrefix("/assets/logo2.png")})`,
             backgroundSize: "contain",
           }}
         ></Link>

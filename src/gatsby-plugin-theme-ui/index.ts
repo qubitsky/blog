@@ -9,8 +9,6 @@ const typoTheme = toTheme({
   bodyFontFamily: ["Alegreya", "Songti SC", "serif"],
 });
 
-console.log({ typoTheme });
-
 export const { typography } = typoTheme;
 
 export default merge(typoTheme, {

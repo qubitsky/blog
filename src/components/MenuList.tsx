@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Flex, NavLink } from "theme-ui";
+import { withPrefix } from "gatsby";
 import PenIcon from "../icons/pen.svg";
 import UserIcon from "../icons/user.svg";
 
@@ -21,7 +22,7 @@ const MenuList: React.FC<{ className?: string }> = ({ className }) => {
     <Flex className={className} as="nav">
       {list.map((item, index) => {
         return (
-          <NavLink key={index} href={item.to}>
+          <NavLink key={index} href={withPrefix(item.to)}>
             <Flex
               p={2}
               sx={{

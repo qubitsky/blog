@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { useEffect, useState } from "react";
+import { withPrefix } from "gatsby";
 import * as jinrishici from "jinrishici";
-import Particles from "react-tsparticles";
+import Particles, { ISourceOptions } from "react-tsparticles";
 import Layout from "../components/Layout";
 import MenuList from "../components/MenuList";
 import particleOpts from "./particle.json";
@@ -35,7 +36,7 @@ const Home = () => {
           sx={{ width: "100%", height: "100%" }}
           width="100%"
           height="100%"
-          options={particleOpts}
+          options={particleOpts as ISourceOptions}
         />
         <div
           sx={{
@@ -57,7 +58,7 @@ const Home = () => {
               width: 432,
               height: 80,
               textIndent: -1000,
-              backgroundImage: "url(/assets/logo.png)",
+              backgroundImage: `url(${withPrefix("/assets/logo.png")})`,
               backgroundSize: "cover",
               marginLeft: -20,
             }}
