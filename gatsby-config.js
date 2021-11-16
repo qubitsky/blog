@@ -5,8 +5,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
+        name: `posts`,
         path: `${__dirname}/src/_posts`,
+      },
+    },
+    process.env.NODE_ENV === "development" && {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `drafts`,
+        path: `${__dirname}/src/_drafts`,
       },
     },
     `gatsby-plugin-sharp`,
@@ -40,5 +47,5 @@ module.exports = {
       },
     },
     "gatsby-plugin-theme-ui",
-  ],
+  ].filter(Boolean),
 };

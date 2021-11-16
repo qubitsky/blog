@@ -1,7 +1,7 @@
 ---
 slug: "/articles/2021/my-site-1"
 title: Version 0.1
-date: 2021-11-15
+date: 2021-11-15 23:38
 tags:
 ---
 

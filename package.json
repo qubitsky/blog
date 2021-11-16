@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "rm -rfv public && gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
     "deploy": "npm run build && gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
