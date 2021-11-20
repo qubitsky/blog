@@ -9,7 +9,6 @@
     "lib": ["dom", "es2015", "es2017"],
     "module": "commonjs",
     "noEmitHelpers": false,
-    "noImplicitAny": true,
     "noResolve": false,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
