@@ -16,6 +16,7 @@ module.exports = {
         path: `${__dirname}/src/_drafts`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,

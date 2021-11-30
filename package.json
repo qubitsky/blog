@@ -29,6 +29,7 @@
     "deepmerge": "^4.2.2",
     "gatsby": "^4.1.2",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^2.1.3",
     "gatsby-plugin-mdx": "^3.1.3",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-react-svg": "^3.1.0",
