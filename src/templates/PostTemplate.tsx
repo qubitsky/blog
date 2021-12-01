@@ -5,7 +5,7 @@ import { Container } from "theme-ui";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
-import { typography } from "../gatsby-plugin-theme-ui";
+import PostMeta from "../components/PostMeta";
 
 const PostTemplate = ({ data }) => {
   const post = data.mdx;
@@ -15,6 +15,15 @@ const PostTemplate = ({ data }) => {
         <Themed.h1 sx={{ textAlign: "center" }}>
           {post.frontmatter.title}
         </Themed.h1>
+        <PostMeta
+          date={post.frontmatter.date}
+          categories={post.frontmatter.categories}
+          tags={post.frontmatter.tags}
+          sx={{
+            justifyContent: "center",
+            marginBottom: "36px",
+          }}
+        />
         <MDXRenderer>{post.body}</MDXRenderer>
       </Container>
     </Layout>
@@ -29,6 +38,9 @@ export const query = graphql`
       body
       frontmatter {
         title
+        tags
+        categories
+        date(formatString: "YYYY, MM/DD")
       }
     }
   }

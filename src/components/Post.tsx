@@ -1,10 +1,7 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
 import { withPrefix } from "gatsby";
-import { Box, Heading, Paragraph, Flex, Link } from "theme-ui";
-import ClockIcon from "../icons/clock.svg";
-import FolderIcon from "../icons/folder.svg";
-import TagIcon from "../icons/tag.svg";
+import { jsx, Box, Heading, Paragraph, Link } from "theme-ui";
+import PostMeta from "./PostMeta";
 
 const Post = ({ title, date, slug, excerpt, categories, tags }) => {
   return (
@@ -13,46 +10,7 @@ const Post = ({ title, date, slug, excerpt, categories, tags }) => {
         <Link href={withPrefix(slug || "#")}>{title || "--"}</Link>
       </Heading>
       <Paragraph>{excerpt}</Paragraph>
-      <Flex
-        sx={{
-          opacity: 0.5,
-          alignItems: "center",
-          fontSize: 1,
-          svg: {
-            width: "16px",
-            height: "16px",
-            marginRight: "4px",
-            verticalAlign: "-4px",
-          },
-          "& > div": {
-            marginRight: "16px",
-          },
-          span: {
-            marginRight: "4px",
-          },
-        }}
-      >
-        <div>
-          <ClockIcon />
-          <time>{date}</time>
-        </div>
-        {!!categories?.length && (
-          <div>
-            <FolderIcon />
-            {categories.map((c, i) => {
-              return <span key={i}>{c}</span>;
-            })}
-          </div>
-        )}
-        {!!tags?.length && (
-          <div>
-            <TagIcon />
-            {tags.map((c, i) => {
-              return <span key={i}>#{c}</span>;
-            })}
-          </div>
-        )}
-      </Flex>
+      <PostMeta date={date} categories={categories} tags={tags} />
     </Box>
   );
 };
