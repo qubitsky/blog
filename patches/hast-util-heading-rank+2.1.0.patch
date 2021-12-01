@@ -1,0 +1,12 @@
+diff --git a/node_modules/hast-util-heading-rank/package.json b/node_modules/hast-util-heading-rank/package.json
+index 0e1e3df..ef0c97a 100644
+--- a/node_modules/hast-util-heading-rank/package.json
++++ b/node_modules/hast-util-heading-rank/package.json
+@@ -26,7 +26,6 @@
+     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+   ],
+   "sideEffects": false,
+-  "type": "module",
+   "main": "index.js",
+   "types": "index.d.ts",
+   "files": [

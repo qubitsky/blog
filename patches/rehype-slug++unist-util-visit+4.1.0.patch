@@ -1,0 +1,12 @@
+diff --git a/node_modules/rehype-slug/node_modules/unist-util-visit/package.json b/node_modules/rehype-slug/node_modules/unist-util-visit/package.json
+index 943e939..ebc5ec4 100644
+--- a/node_modules/rehype-slug/node_modules/unist-util-visit/package.json
++++ b/node_modules/rehype-slug/node_modules/unist-util-visit/package.json
+@@ -39,7 +39,6 @@
+     "Richard Gibson <richard.gibson@gmail.com>"
+   ],
+   "sideEffects": false,
+-  "type": "module",
+   "main": "index.js",
+   "types": "index.d.ts",
+   "files": [

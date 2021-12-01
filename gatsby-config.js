@@ -1,3 +1,5 @@
+const requireEsm = require("esm")(module);
+
 module.exports = {
   pathPrefix: "/blog",
   plugins: [
@@ -29,6 +31,10 @@ module.exports = {
               maxWidth: 1200,
             },
           },
+        ],
+        rehypePlugins: [
+          // Generate heading ids for rehype-autolink-headings
+          requireEsm("rehype-slug").default,
         ],
       },
     },

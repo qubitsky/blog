@@ -1,0 +1,12 @@
+diff --git a/node_modules/hast-util-to-string/package.json b/node_modules/hast-util-to-string/package.json
+index 7bc4b3d..ea4fa0e 100644
+--- a/node_modules/hast-util-to-string/package.json
++++ b/node_modules/hast-util-to-string/package.json
+@@ -27,7 +27,6 @@
+     "Titus Wormer <tituswormer@gmail.com>"
+   ],
+   "sideEffects": false,
+-  "type": "module",
+   "main": "index.js",
+   "types": "index.d.ts",
+   "files": [

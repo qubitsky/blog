@@ -1,0 +1,12 @@
+diff --git a/node_modules/rehype-slug/node_modules/unist-util-is/package.json b/node_modules/rehype-slug/node_modules/unist-util-is/package.json
+index 755ec24..9f48f2c 100644
+--- a/node_modules/rehype-slug/node_modules/unist-util-is/package.json
++++ b/node_modules/rehype-slug/node_modules/unist-util-is/package.json
+@@ -29,7 +29,6 @@
+     "Lucas Brandstaetter <lucas@brandstaetter.tech> (https://github.com/Roang-zero1)"
+   ],
+   "sideEffects": false,
+-  "type": "module",
+   "main": "index.js",
+   "types": "index.d.ts",
+   "files": [

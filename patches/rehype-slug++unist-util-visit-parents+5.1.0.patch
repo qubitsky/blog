@@ -1,0 +1,12 @@
+diff --git a/node_modules/rehype-slug/node_modules/unist-util-visit-parents/package.json b/node_modules/rehype-slug/node_modules/unist-util-visit-parents/package.json
+index 56cc959..8dede83 100644
+--- a/node_modules/rehype-slug/node_modules/unist-util-visit-parents/package.json
++++ b/node_modules/rehype-slug/node_modules/unist-util-visit-parents/package.json
+@@ -28,7 +28,6 @@
+     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+   ],
+   "sideEffects": false,
+-  "type": "module",
+   "main": "index.js",
+   "browser": {
+     "./color.js": "./color.browser.js"

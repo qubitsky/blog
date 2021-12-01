@@ -1,0 +1,12 @@
+diff --git a/node_modules/hast-util-has-property/package.json b/node_modules/hast-util-has-property/package.json
+index 2e69f4b..f9679bb 100644
+--- a/node_modules/hast-util-has-property/package.json
++++ b/node_modules/hast-util-has-property/package.json
+@@ -25,7 +25,6 @@
+     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+   ],
+   "sideEffects": false,
+-  "type": "module",
+   "main": "index.js",
+   "types": "index.d.ts",
+   "files": [
